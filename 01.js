@@ -354,4 +354,65 @@
 //     return ans
 // }
 
-// console.log(char("hari hariI"))
+// console.log(char("hari hariI")) 
+
+//***********************************************************************************//
+
+//1- Find Duplicate element in array
+
+// function findDup(arr){
+
+//     let ans = []
+//     let ans2=[]
+
+//     for(let i=0; i<arr.length; i++){
+//         if(ans.includes(arr[i])){
+//             ans2.push(arr[i])
+//         }else{
+//             ans.push(arr[i])
+//         }
+//     }
+
+//     return {ans2,ans}
+
+// }
+
+// console.log(findDup([2,2,3,4,5,5,6])) 
+
+
+// let arr = [2,5,4,8,4,8,7,8]
+
+// function dup(arr){
+//     let duplArr = []
+//     let res = []
+
+//     for(let i=0; i<arr.length; i++){
+//         if(duplArr.includes(arr[i])){
+//             res.push(arr[i])
+//         }else{
+//             duplArr.push(arr[i])
+//         }
+//     }
+//     return res
+// }
+// console.log(dup(arr))
+
+
+//2-- find Letter count 
+
+// function countStr(str){
+//     let newStr = str.replaceAll(" ","")  
+//     let countObj = {}
+//     for(let i=0; i<newStr.length; i++){
+//         let char = newStr[i]
+//         if(!countObj[char] && char !== " "){
+//             countObj[char]=1
+//         }else{
+//             countObj[char]++
+//         }
+//     }
+//     return countObj
+// }
+
+// console.log(countStr("hello buddy"))
+
