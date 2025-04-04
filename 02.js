@@ -42,7 +42,7 @@
 
 //2---Count the word 
 
-// let str = "Hello World"-
+// let str = "Hello World"
 
 // function countWord(str){
 //     let newStr = str.replaceAll(" ","")
@@ -202,4 +202,284 @@
 // }
 
 // console.log(findFact(n)) 
+//----------------------------------------------------------------------------------------------------------------- 
+
+//9-Find the Prime number from array 
+
+// let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] 
+
+// function isPrime(num){
+//     let ans = []
+//     for(let i = 0; i<arr.length; i++){
+
+//         let num = arr[i]
+        
+//         if(num < 2){
+//             continue
+//         }
+
+//         let prime= true
+//         for(let j=2; j<num; j++){
+//             if(num%j ===0){
+//                 prime =  false
+//                 break
+//             }
+//         }
+//         if(prime){
+//             ans.push(num)
+//         }
+
+//     }
+//     return ans
+
+// }
+
+// console.log(isPrime(arr)) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+//10-Find the count of vowels 
+
+// let str = "hari"
+
+// function vowels(str){
+//     let count = 0
+//     let newStr = str.toLowerCase()
+//     let vowelsArr = ['a','e','i','o','u'] 
+//     let vowelsAns=[]
+
+//     for(let word of newStr){
+//         if(vowelsArr.includes(word)){
+//             vowelsAns.push(word)
+//             count++
+//         }
+//     }
+
+//     return {
+//         count,vowelsAns
+//     }
+
+// }
+
+// console.log(vowels(str)) 
+//----------------------------------------------------------------------------------------------------------------- 
+
+//11-how to reverse a string in javascript 
+
+// let str = "hari"
+
+// function reverseStr(str){
+//     let newStr = ""
+
+//     for(let i=str.length-1; i >=0; i--){
+//         newStr = newStr+str[i]
+//     }
+
+//     return newStr
+// }
+
+// console.log(reverseStr(str)) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+// 12-How to find palindrome in javascript 
+
+// let str = "mahghdam" 
+
+// function palindrome(str){
+
+//     let first =""
+//     let last=""
+//     let ans = ""
+
+//     for(let i=0; i< Math.abs(str.length/2); i++){
+//         first = str[i]
+//         last = str[(str.length-1)-i] 
+
+//         if(first == last){
+//             ans = "This is a palindrome string"
+            
+//         }else{
+//             ans = "This is not palindrome string"
+            
+//         }
+//     }
+
+//     return ans
+
+// }
+
+// console.log(palindrome(str)) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+//13-Swap Two variables  without using third variable 
+
+// let a = 30 
+// let b = 20  
+
+// console.log(a,b)
+
+// a = a+b 
+// b = a-b 
+// a = a-b 
+
+// console.log(a,b) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+ 
+//14-How to merged two array and sort them in js
+
+// let arr1 = [2,5,6,3,4]
+// let arr2 = [9,10,7,8]
+
+// //  let arr3 = arr1.concat(arr2)
+// let arr3 = [...arr1,...arr2]
+// let ans = arr3.sort((a,b)=>{
+//     return a-b
+// })
+// console.log( ans) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+//15- find factors of given number 
+
+// function factor(num){
+
+//     let ans = [] 
+
+//     for(let i=1; i<=num; i++){
+//         if(num%i == 0){
+//             ans.push(i)
+//         }
+//     }
+//     return ans
+
+// }
+// console.log(factor(30))
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+//16-compare two arrays is equal or not  
+
+// let arr1 = [2,5,6,3,4,6]
+// let arr2 = [2,5,6,3,4,5]
+
+// function compare(arr1,arr2){
+
+//     let flag = true
+
+    // for(let i = 0; i<arr1.length; i++){
+        
+    //     if(arr1.length !== arr2.length){
+    //         flag = false;
+    //     }
+
+    //     if(arr1[i] !== arr2[i]){
+    //         flag = false;
+    //     }
+    // }
+
+    // if(flag){
+    //     return "This is equal"
+    // }else{
+    //     return "This is not equal"
+    // }
+
+    // let ans = arr1.every((val,ind)=>{
+    //     return val == arr2[ind]
+    // })
+
+    // console.log(ans)
+// }
+
+// console.log(compare(arr1,arr2)) 
+
 //-----------------------------------------------------------------------------------------------------------------
+
+//17 -Find the intersection between two array 
+
+// let arr1 = [2,5,11,3,4,6]
+// let arr2 = [13,5,6,3,4,5]
+
+// function intersection(arr1,arr2){
+
+//     let ans = [] 
+
+//     // for(let i=0; i<arr1.length; i++){
+//     //     if(arr2.includes(arr1[i])){
+//     //         ans.push(arr1[i])
+//     //     }
+//     // } 
+
+//     let ans2 = arr1.filter((val,ind)=>{
+//         return arr2.includes(val)
+//     })
+
+// return ans2
+// }
+
+// console.log(intersection(arr1,arr2)) 
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//18 -Find the union between two array 
+
+// let arr1 = [2,5,11,3,4,6]
+// let arr2 = [13,5,6,3,4,5,78]
+
+// function union(arr1,arr2){
+
+//     let union = [...arr1]
+    
+//     for(let i=0; i<arr2.length; i++){
+
+//         let duplicate  = false 
+
+//         for(let j=0; j<union.length; j++){
+//             if(arr2[i] == union[j]){
+//                 duplicate = true
+//                 break
+//             }
+//         }
+
+//         if(!duplicate){
+//             union.push(arr2[i])
+//         }
+
+//     }
+
+//     return union
+
+    
+    
+    
+// }
+
+// console.log(union(arr1,arr2)) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+//19 -Find out duplicate item from array 
+
+// let arr = [2,2,5,4,6,7,9] 
+
+// function duplicate(arr){
+
+//     let ans = [] 
+//     let duplicate = []
+
+//     for(let val of arr){
+//         if(!ans.includes(val)){
+//             ans.push(val)
+//         }else{
+//             duplicate.push(val)
+//         }
+//     }
+
+// return {ans,duplicate}
+
+// }
+
+// console.log(duplicate(arr)); 
+
+

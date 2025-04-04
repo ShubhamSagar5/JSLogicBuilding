@@ -116,7 +116,7 @@
 
 // mul(2,20)
 
-//8----find Maimum Array from number 
+//8----find Minium number from Array   
 // function max(arr){
 //     let ans = arr[0]
 //     arr.forEach((num)=>{
@@ -367,7 +367,11 @@
 
 //     for(let i=0; i<arr.length; i++){
 //         if(ans.includes(arr[i])){
-//             ans2.push(arr[i])
+           
+//             if(!ans2.includes(arr[i])){
+//                  ans2.push(arr[i])
+//             }
+           
 //         }else{
 //             ans.push(arr[i])
 //         }
@@ -377,7 +381,7 @@
 
 // }
 
-// console.log(findDup([2,2,3,4,5,5,6])) 
+// console.log(findDup([2,2,3,4,5,5,6,2])) 
 
 
 // let arr = [2,5,4,8,4,8,7,8]
