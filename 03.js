@@ -86,16 +86,27 @@
 //----------------------------------------------
 
 
-let obj = Object.create({name:"hari"})
-console.log(obj.name)
-obj.name = "hari2"
-delete obj.name 
-console.log(obj.name) 
+// let obj = Object.create({name:"hari"})
+// console.log(obj.name)
+// obj.name = "hari2"
+// delete obj.name 
+// console.log(obj.name) 
 
-let obj2 = {
-    name:"hari2"
-} 
-console.log("br")
-console.log(obj2.name)
-delete obj2.name 
-console.log(obj2.name) 
+// let obj2 = {
+//     name:"hari2"
+// } 
+// console.log("br")
+// console.log(obj2.name)
+// delete obj2.name 
+// console.log(obj2.name) 
+
+//----------------------------------------------
+
+let count = 0
+function greet(num){
+   count = count+num
+   return count
+}
+
+console.log(greet(5))
+console.log(greet(5))

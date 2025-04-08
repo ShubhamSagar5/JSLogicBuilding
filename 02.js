@@ -482,4 +482,179 @@
 
 // console.log(duplicate(arr)); 
 
+//-------------------------------
 
+
+// let arr1 = [13,7,6,8,4,4,5,78,6,6] 
+
+// function union(arr1){
+  
+//     let seen  = []
+//     let duplicate = []
+
+//     for(let val of arr1){
+//         if(!seen.includes(val)){
+//             seen.push(val)
+//         }else {
+//             if(!duplicate.includes(val)) duplicate.push(val)
+//         }
+//     }
+
+    
+   
+
+// return {duplicate,seen}
+
+
+
+// }
+
+
+
+// console.log(union(arr1))
+
+
+//----------------------------------------------------------------------------------------------------------------- 
+//20- Convert first letter of string in to uppercase 
+
+// let string = "hello buddy" 
+
+// function str(str){
+
+//     let newStr = ""
+//     let stringArray = str.split(" ")
+    
+//     let res = stringArray.map((val)=>{
+//         return val.charAt(0).toUpperCase() + val.slice(1)
+//     })
+        
+//     newStr = res.join(" ")
+
+//     return newStr
+
+// } 
+
+// console.log(str(string)) 
+
+//-----------------------------------------------------------------------------------------------------------------  
+
+//21-- Fibonnaci Series
+
+// function fibo(num){
+//     let a = 0 
+//     let b = 1
+//     let ans=[]
+//     for(let i=0; i<=num; i++){
+        
+//         let res = a+b 
+//         a=b
+//         b=res 
+//         ans.push(res)
+
+//     }
+
+//     return ans
+
+// }
+
+// console.log(fibo(10)) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+//22 -Star Pattern code (Right Triangle ,Pyramid) 
+
+// for(let i=1;i<=6;i++){
+//     let row = ""
+
+//     for(let j=1; j<=i; j++){
+//         row = row+"*"
+//     }
+
+//     console.log(row)
+// } 
+
+
+// for(let i=1; i<=6; i++){
+//     let row  = "" 
+
+//     //space 
+//     for(let j=1; j<=6-i; j++){
+//         row=row+" "
+//     }
+
+//     for(let k=1;k<=2*i-1;k++){
+//         row = row+"*"
+//     }
+
+//     console.log(row)
+// } 
+ 
+//----------------------------------------------------------------------------------------------------------------- 
+
+//23 --Find the number of occurrenec in the string 
+
+// function count(str){
+//     let newStr = str.toLowerCase().replaceAll(" ","")
+//     let map={} 
+
+//     for(let val of newStr){
+//         if(map[val]){
+//             map[val]++
+//         }else{
+//             map[val] = 1
+//         }
+//     }
+
+//     return map
+
+
+// }
+
+// console.log(count("Hari hAri")) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+// 23--Print Table of user defined number 
+
+// function Table(num){
+
+//     for(let i=1;i<=10;i++){
+//         console.log(`${num} * ${i} =  ${i*num}`)
+//     }
+// }
+
+// Table(2) 
+
+//----------------------------------------------------------------------------------------------------------------- 
+
+//24 -Armstrong Number 
+
+function Armstrong(num){
+
+    let number = [] 
+    let newNumber = num
+    
+
+    while(newNumber > 0){
+        let lastDigit = newNumber%10 
+        newNumber = Math.floor(newNumber/10) 
+        number.push(lastDigit)
+    }
+    
+    let ans = 0 
+    let powLength = number.length
+    number.forEach((item)=>{
+        ans = ans+(item**powLength)
+        
+    })
+    
+    if(ans == num){
+        return true
+    }else{
+        return false
+    }
+    
+
+}
+
+console.log(Armstrong(371))
